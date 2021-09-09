@@ -5,8 +5,8 @@ namespace FootballMatchHub.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        //public DbSet<>  { get; set; }
-        //public DbSet<>  { get; set; }
+        public DbSet<Match> Matches { get; set; }
+        public DbSet<TypeOfGame> TypesOfGame { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

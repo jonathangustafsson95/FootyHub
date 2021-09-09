@@ -315,11 +315,21 @@
     <Compile Include="Migrations\202109091235230_InitialModel.designer.cs">
       <DependentUpon>202109091235230_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109091252572_CreateMatchTable.cs" />
+    <Compile Include="Migrations\202109091252572_CreateMatchTable.designer.cs">
+      <DependentUpon>202109091252572_CreateMatchTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109091322285_OverrideConventionsForMatch.cs" />
+    <Compile Include="Migrations\202109091322285_OverrideConventionsForMatch.designer.cs">
+      <DependentUpon>202109091322285_OverrideConventionsForMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Match.cs" />
+    <Compile Include="Models\TypeOfGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -408,6 +418,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202109091235230_InitialModel.resx">
       <DependentUpon>202109091235230_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109091252572_CreateMatchTable.resx">
+      <DependentUpon>202109091252572_CreateMatchTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109091322285_OverrideConventionsForMatch.resx">
+      <DependentUpon>202109091322285_OverrideConventionsForMatch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
