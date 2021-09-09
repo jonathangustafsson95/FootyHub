@@ -1,0 +1,11 @@
+﻿// Requirements Document'
+
+FootballMatchHub is a mini social network hub that makes it easy for football players to add and track matches played.
+
+Players can sign up and lsit their matches. When adding a match, they should specify date/time, location, opponent team name, team name, goals, assist and so on.
+
+A player should have a My Matches page, from where they should be able to add, edit or remove matches.
+
+Players should be able to view and search all matches and view details.
+
+Players should be able to follow other players and get notifications on any news.
