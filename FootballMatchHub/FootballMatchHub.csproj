@@ -323,6 +323,10 @@
     <Compile Include="Migrations\202109091322285_OverrideConventionsForMatch.designer.cs">
       <DependentUpon>202109091322285_OverrideConventionsForMatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109091327599_PopTypeOfGameTable.cs" />
+    <Compile Include="Migrations\202109091327599_PopTypeOfGameTable.designer.cs">
+      <DependentUpon>202109091327599_PopTypeOfGameTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbContext.cs" />
@@ -424,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109091322285_OverrideConventionsForMatch.resx">
       <DependentUpon>202109091322285_OverrideConventionsForMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109091327599_PopTypeOfGameTable.resx">
+      <DependentUpon>202109091327599_PopTypeOfGameTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
