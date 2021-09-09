@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballMatchHub", "FootballMatchHub\FootballMatchHub.csproj", "{017D6A73-BFAE-48A3-BA4E-02E6725C4BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballMatchHub.Tests", "FootballMatchHub.Tests\FootballMatchHub.Tests.csproj", "{6255B965-6E2E-4C23-8206-EC9184732648}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{017D6A73-BFAE-48A3-BA4E-02E6725C4BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017D6A73-BFAE-48A3-BA4E-02E6725C4BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017D6A73-BFAE-48A3-BA4E-02E6725C4BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017D6A73-BFAE-48A3-BA4E-02E6725C4BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6255B965-6E2E-4C23-8206-EC9184732648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6255B965-6E2E-4C23-8206-EC9184732648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6255B965-6E2E-4C23-8206-EC9184732648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6255B965-6E2E-4C23-8206-EC9184732648}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC4837AD-4FE8-44F5-A34F-82B5869CBEA1}
+	EndGlobalSection
+EndGlobal
