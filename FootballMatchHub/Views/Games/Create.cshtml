@@ -4,9 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Add a played game</h2>
 @using (Html.BeginForm("Create", "Games"))
 {
+    @Html.AntiForgeryToken()
+<div style="display:inline-block">
     <div class="form-group">
         @Html.LabelFor(m => m.Date)
         @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
@@ -32,6 +34,13 @@
         @Html.TextBoxFor(m => m.Result, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Result)
     </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.TypeOfGame)
+        @Html.DropDownListFor(m => m.TypeOfGame, new SelectList(Model.TypeOfGames, "Id", "Name"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.TypeOfGame)
+    </div>
+</div>
+<div style="display:inline-block">
     <div class="form-group">
         @Html.LabelFor(m => m.Goals)
         @Html.TextBoxFor(m => m.Goals, new { @class = "form-control" })
@@ -62,12 +71,10 @@
         @Html.TextBoxFor(m => m.PosPlayed, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.PosPlayed)
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.TypeOfGame)
-        @Html.DropDownListFor(m => m.TypeOfGame, new SelectList(Model.TypeOfGames, "Id", "Name"), "", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.TypeOfGame)
-    </div>
+</div>
+<div>
     <button type="submit" class="btn btn-primary">Save</button>
+</div>
 }
 @section scripts
 {

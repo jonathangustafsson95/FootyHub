@@ -30,6 +30,7 @@ namespace FootballMatchHub.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(MatchFormViewModel vm)
         {
             if (!ModelState.IsValid)
