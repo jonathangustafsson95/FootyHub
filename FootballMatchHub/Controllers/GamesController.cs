@@ -32,10 +32,16 @@ namespace FootballMatchHub.Controllers
         [HttpPost]
         public ActionResult Create(MatchFormViewModel vm)
         {
+            if (!ModelState.IsValid)
+            {
+                vm.TypeOfGames = _context.TypesOfGame.ToList();
+                return View("Create", vm); 
+            }
+            
             var game = new Match
             {
                 PlayerId = User.Identity.GetUserId(),
-                Datetime = DateTime.Parse(string.Format("{0} {1}", vm.Date, vm.Time)),
+                Datetime = vm.GetDateTime(),
                 TypeOfGameId = vm.TypeOfGame,
                 HomeTeam = vm.HomeTeam,
                 AwayTeam = vm.AwayTeam,
