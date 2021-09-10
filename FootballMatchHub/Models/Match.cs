@@ -7,8 +7,10 @@ namespace FootballMatchHub.Models
     {
         public int Id { get; set; }
 
-        [Required]
         public ApplicationUser Player { get; set; }
+
+        [Required]
+        public string PlayerId { get; set; }
 
         public DateTime Datetime { get; set; }
 
@@ -37,7 +39,9 @@ namespace FootballMatchHub.Models
         [StringLength(255)]
         public string PosPlayed { get; set; }
 
-        [Required]
         public TypeOfGame TypeOfGame { get; set; }
+
+        [Required]
+        public byte TypeOfGameId { get; set; }
     }
 }

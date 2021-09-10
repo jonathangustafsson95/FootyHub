@@ -339,6 +339,10 @@
     <Compile Include="Migrations\202109091327599_PopTypeOfGameTable.designer.cs">
       <DependentUpon>202109091327599_PopTypeOfGameTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109100749548_AddFkPropertiesToMatch.cs" />
+    <Compile Include="Migrations\202109100749548_AddFkPropertiesToMatch.designer.cs">
+      <DependentUpon>202109100749548_AddFkPropertiesToMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -515,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109091327599_PopTypeOfGameTable.resx">
       <DependentUpon>202109091327599_PopTypeOfGameTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109100749548_AddFkPropertiesToMatch.resx">
+      <DependentUpon>202109100749548_AddFkPropertiesToMatch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

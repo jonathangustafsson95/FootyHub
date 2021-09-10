@@ -5,7 +5,8 @@
 }
 
 <h2>Create</h2>
-<form>
+@using (Html.BeginForm("Create", "Games"))
+{
     <div class="form-group">
         @Html.LabelFor(m => m.Date)
         @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
@@ -47,8 +48,13 @@
         @Html.TextBoxFor(m => m.MinPlayed, new { @class = "form-control" })
     </div>
     <div class="form-group">
+        @Html.LabelFor(m => m.PosPlayed)
+        @Html.TextBoxFor(m => m.PosPlayed, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
         @Html.LabelFor(m => m.TypeOfGame)
-        @Html.DropDownListFor(m => m.TypeOfGame, new SelectList(Model.TypeOfGames, "Id", "Name"), "", new { @class="form-control"})
+        @Html.DropDownListFor(m => m.TypeOfGame, new SelectList(Model.TypeOfGames, "Id", "Name"), "", new { @class = "form-control" })
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
-</form>
+}
+

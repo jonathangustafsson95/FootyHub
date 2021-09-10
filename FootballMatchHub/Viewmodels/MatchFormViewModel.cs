@@ -30,7 +30,7 @@ namespace FootballMatchHub.Viewmodels
 
         public string PosPlayed { get; set; }
 
-        public int TypeOfGame { get; set; }
+        public byte TypeOfGame { get; set; }
 
         public IEnumerable<TypeOfGame> TypeOfGames { get; set; }
 
