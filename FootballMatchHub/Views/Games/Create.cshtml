@@ -7,16 +7,17 @@
 <h2>Add a played game</h2>
 @using (Html.BeginForm("Create", "Games"))
 {
+    <p class="alert alert-info">All fields are <strong>required</strong></p>
     @Html.AntiForgeryToken()
 <div style="display:inline-block">
     <div class="form-group">
         @Html.LabelFor(m => m.Date)
-        @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Date, new { @class = "form-control", autofocus = "autofocus", placeholder = "eg 1 Jan 2021" })
         @Html.ValidationMessageFor(m => m.Date)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Time)
-        @Html.TextBoxFor(m => m.Time, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Time, new { @class = "form-control", placeholder = "eg 21:00" })
         @Html.ValidationMessageFor(m => m.Time)
     </div>
     <div class="form-group">
@@ -35,12 +36,22 @@
         @Html.ValidationMessageFor(m => m.Result)
     </div>
     <div class="form-group">
+        @Html.LabelFor(m => m.Season)
+        @Html.TextBoxFor(m => m.Season, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Season)
+    </div>
+    <div class="form-group">
         @Html.LabelFor(m => m.TypeOfGame)
         @Html.DropDownListFor(m => m.TypeOfGame, new SelectList(Model.TypeOfGames, "Id", "Name"), "", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.TypeOfGame)
     </div>
 </div>
 <div style="display:inline-block">
+    <div class="form-group">
+        @Html.LabelFor(m => m.MatchSummary)
+        @Html.TextBoxFor(m => m.MatchSummary, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MatchSummary)
+    </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Goals)
         @Html.TextBoxFor(m => m.Goals, new { @class = "form-control" })

@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FootballMatchHub.Models;
+using FootballMatchHub.Viewmodels;
 
 namespace FootballMatchHub.Controllers
 {
@@ -151,7 +152,11 @@ namespace FootballMatchHub.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { 
+                    Name = model.Name,
+                    UserName = model.Email,
+                    Email = model.Email 
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

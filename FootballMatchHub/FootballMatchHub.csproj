@@ -343,13 +343,25 @@
     <Compile Include="Migrations\202109100749548_AddFkPropertiesToMatch.designer.cs">
       <DependentUpon>202109100749548_AddFkPropertiesToMatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.cs" />
+    <Compile Include="Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.designer.cs">
+      <DependentUpon>202109130709424_AddNameToAppUserAndPropsToMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Viewmodels\RegisterViewModel.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Viewmodels\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="Viewmodels\ExternalLoginListViewModel.cs" />
+    <Compile Include="Viewmodels\ForgotPasswordViewModel.cs" />
+    <Compile Include="Viewmodels\ForgotViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Viewmodels\LoginViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Match.cs" />
+    <Compile Include="Viewmodels\ResetPasswordViewModel.cs" />
+    <Compile Include="Viewmodels\SendCodeViewModel.cs" />
     <Compile Include="Models\TypeOfGame.cs" />
+    <Compile Include="Viewmodels\VerifyCodeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Viewmodels\NotFutureDate.cs" />
@@ -524,6 +536,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109100749548_AddFkPropertiesToMatch.resx">
       <DependentUpon>202109100749548_AddFkPropertiesToMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.resx">
+      <DependentUpon>202109130709424_AddNameToAppUserAndPropsToMatch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

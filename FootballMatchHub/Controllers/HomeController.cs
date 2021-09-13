@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FootballMatchHub.Models;
+using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,19 @@ namespace FootballMatchHub.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public HomeController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var playedMatches = _context.Matches
+                .Include(m => m.Player)
+                .Where(m => m.Datetime < DateTime.Now);
+            return View(playedMatches);
         }
 
         public ActionResult About()

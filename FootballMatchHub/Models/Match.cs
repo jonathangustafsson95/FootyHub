@@ -26,6 +26,13 @@ namespace FootballMatchHub.Models
         [StringLength(255)]
         public string Result { get; set; }
 
+        [Required]
+        [StringLength(255)]
+        public string MatchSummary { get; set; }
+
+        [Required]
+        public int Season { get; set; }
+
         public int Goals { get; set; }
 
         public int Assists { get; set; }
