@@ -1,0 +1,79 @@
+﻿@model FootballMatchHub.Core.Viewmodels.MatchViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>@Model.Heading</h1>
+@using (Html.BeginForm("Search", "Games"))
+{
+    <div class="form-group">
+        <div class="input-group" style="width:300px">
+            @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control", placeholder = "Seach by keyword.." })
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-search"></i>
+            </span>
+        </div>
+    </div>
+}
+<ul id="matches" class="matches voffset3">
+    @foreach (var match in Model.PlayedMatches)
+    {
+        <li class="voffset3">
+            <div class="date">
+                <div class="month">
+                    @match.Datetime.ToString("MMM")
+                </div>
+                <div class="day">
+                    @match.Datetime.ToString("d ")
+                </div>
+                <div class="year">
+                    @match.Datetime.ToString("yyyy ")
+                </div>
+            </div>
+            <div class="details">
+                <span class="player">
+                    <a href="@Url.Action("Details", "Games", new { id = match.Id })">
+                        @match.Player.Name
+                    </a>
+
+                    @if (match.IsCanceled)
+                    {
+                        <span class="label label-warning">Canceled</span>
+                    }
+                </span>
+                <span class="homeTeam">
+                    @match.HomeTeam  -
+                </span>
+                <span class="awayTeam">
+                    @match.AwayTeam
+                </span>
+                <span style="font-size:x-small">
+                    @match.MatchSummary
+                </span>
+                @if (Model.ShowActions && !match.IsCanceled)
+                {
+                    <button data-match-id="@match.Id"
+                            class="btn @(Model.FollowedGames.Contains(match.Id) ? "btn-info" : "btn-default") btn-sm js-toggle-followgame">
+                        @(Model.FollowedGames.Contains(match.Id) ? "Added":"Add?")
+                    </button>
+                }
+                <span class="typeOfGame">
+                    @match.TypeOfGame.Name
+                </span>
+                <span class="result">
+                    @match.Result
+                </span>
+            </div>
+        </li>
+    }
+</ul>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            MatchController.init("#matches");
+        });
+    </script>
+}
+
+

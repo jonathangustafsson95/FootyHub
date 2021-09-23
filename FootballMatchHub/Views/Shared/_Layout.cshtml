@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - FootyHub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;300&display=swap" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -38,8 +40,77 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/lib")
+    @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
+
+    <script type="text/x-template" id="notifications-template">
+        <ul style="list-style: none; padding-left: 0;">
+            <%
+            _.each(notifications, function(notification) {
+            if (notification.type == 1)
+            {%>
+            <li style="border-bottom: 1px solid #ddd; padding: 10px 0; font-size: small"><span style="font-weight:bold;"><%= notification.match.player.name%></span> has canceled the game "<%= notification.match.homeTeam%> vs <%= notification.match.awayTeam%>" at <%= notification.match.datetime%></li>
+            <%}
+
+            else if (notification.type == 2) {
+            var changes = [],
+            originalValues=[],
+            newValues=[];
+
+            if (notification.originalResult != notification.match.result) {
+            changes.push('result');
+            originalValues.push(notification.originalResult);
+            newValues.push(notification.match.result);
+            }
+
+            if (notification.originalMatchSummary != notification.match.matchSummary) {
+            changes.push('summary');
+            originalValues.push(notification.originalMatchSummary);
+            newValues.push(notification.match.matchSummary);
+            }
+            %>
+
+            <li style="border-bottom:1px solid #ddd; padding: 10px 0; font-size:small">
+                <span style="font-weight:bold;"><%= notification.match.player.name %></span> has changed the <%= changes.join(' and ') %> of the game
+                "<%= notification.match.homeTeam%> vs <%= notification.match.awayTeam%>" from "<%= originalValues.join('/') %>" to "<%= newValues.join('/') %>"
+            </li>
+
+            <%
+            }
+            })
+            %>
+        </ul>
+    </script>
+    <script>
+        $(document).ready(function () {
+            $.getJSON("/api/notifications", function (notifications) {
+                if (notifications.length == 0)
+                    return;
+
+                $(".js-notifications-count")
+                    .text(notifications.length)
+                    .removeClass("hide")
+                    .addClass("animated bounceInDown");
+
+                $(".notifications").popover({
+                    html: true,
+                    title: "NOTIFICATIONS",
+                    content: function () {
+                        var compiled = _.template($("#notifications-template").html());
+                        return compiled({ notifications: notifications });
+                    },
+                    placement: "bottom"
+                }).on("shown.bs.popover", function () {
+                    $.post("/api/notifications/markAsRead")
+                        .done(function () {
+                            $(".js-notifications-count")
+                                .text("")
+                                .addClass("hide");
+                        });
+                })
+            });
+        });
+    </script>
 </body>
 </html>

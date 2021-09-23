@@ -1,0 +1,95 @@
+﻿@model FootballMatchHub.Core.Viewmodels.MatchFormViewModel
+@{
+    ViewBag.Title = @Model.Heading;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Heading</h2>
+@using (Html.BeginForm(Model.Action, "Games"))
+{
+    <p class="alert alert-info">All fields are <strong>required</strong></p>
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m=> m.Id)
+    <div style="display:inline-block">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Date)
+            @Html.TextBoxFor(m => m.Date, new { @class = "form-control", autofocus = "autofocus", placeholder = "eg 1 Jan 2021" })
+            @Html.ValidationMessageFor(m => m.Date)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Time)
+            @Html.TextBoxFor(m => m.Time, new { @class = "form-control", placeholder = "eg 21:00" })
+            @Html.ValidationMessageFor(m => m.Time)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.HomeTeam)
+            @Html.TextBoxFor(m => m.HomeTeam, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.HomeTeam)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.AwayTeam)
+            @Html.TextBoxFor(m => m.AwayTeam, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.AwayTeam)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Result)
+            @Html.TextBoxFor(m => m.Result, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Result)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Season)
+            @Html.TextBoxFor(m => m.Season, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Season)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.TypeOfGame)
+            @Html.DropDownListFor(m => m.TypeOfGame, new SelectList(Model.TypeOfGames, "Id", "Name"), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.TypeOfGame)
+        </div>
+    </div>
+    <div style="display:inline-block">
+        <div class="form-group">
+            @Html.LabelFor(m => m.MatchSummary)
+            @Html.TextBoxFor(m => m.MatchSummary, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.MatchSummary)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Goals)
+            @Html.TextBoxFor(m => m.Goals, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Goals)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Assists)
+            @Html.TextBoxFor(m => m.Assists, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Assists)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.YCard)
+            @Html.TextBoxFor(m => m.YCard, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.YCard)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.RCard)
+            @Html.TextBoxFor(m => m.RCard, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.RCard)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MinPlayed)
+            @Html.TextBoxFor(m => m.MinPlayed, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.MinPlayed)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PosPlayed)
+            @Html.TextBoxFor(m => m.PosPlayed, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.PosPlayed)
+        </div>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary btn-lg">Save</button>
+    </div>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

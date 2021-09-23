@@ -1,0 +1,52 @@
+﻿@model FootballMatchHub.Core.Viewmodels.MatchDetailsViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    @Model.Match.Player.Name
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (Model.IsFollowing)
+        {
+            <button class="btn btn-info js-toggle-follow" data-user-id="@Model.Match.PlayerId">Following</button>
+        }
+        else
+        {
+            <button class="btn btn-default js-toggle-follow" data-user-id="@Model.Match.PlayerId">Follow</button>
+        }
+    }
+</h2>
+<p>
+    @Model.Match.Datetime.ToString("d MMM") at @Model.Match.Datetime.ToString("HH:mm")<br><br>
+    <u>@Model.Match.HomeTeam vs @Model.Match.AwayTeam </u><br>
+    Result: @Model.Match.Result<br>
+    Summary: @Model.Match.MatchSummary<br>
+    Season: @Model.Match.Season<br>
+    Goals: @Model.Match.Goals<br>
+    Assists: @Model.Match.Assists<br>
+    Yellow cards: @Model.Match.YCard<br>
+    Red cards: @Model.Match.RCard<br>
+    Minutes played: @Model.Match.MinPlayed<br>
+    Position played: @Model.Match.PosPlayed<br>
+</p>
+
+@if (User.Identity.IsAuthenticated && Model.IsAttending)
+{
+    <br>
+    <p>You are following this game. </p>
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            MatchDetailController.init();
+        });
+    </script>    
+}
+
+
+
+

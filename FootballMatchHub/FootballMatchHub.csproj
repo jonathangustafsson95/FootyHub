@@ -47,6 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -189,6 +195,27 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Conventions.3.3.0\lib\net45\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Factory, Version=3.3.2.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Factory.3.3.2\lib\net45\Ninject.Extensions.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.3.2.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.3.2\lib\net45\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common.WebHost, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.WebHost.3.3.0\lib\net45\Ninject.Web.Common.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.3.0\lib\net45\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi, Version=3.3.1.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.3.3.1\lib\net45\Ninject.Web.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
@@ -212,6 +239,9 @@
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -257,6 +287,12 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -301,6 +337,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -312,63 +351,125 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="Controllers\API\MatchesController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Core\DTOs\MatchDto.cs" />
+    <Compile Include="Core\DTOs\NotificationDto.cs" />
+    <Compile Include="Controllers\API\NotificationsController.cs" />
+    <Compile Include="Controllers\FolloweesController.cs" />
+    <Compile Include="Controllers\API\FollowingsController.cs" />
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Core\DTOs\FollowingDto.cs" />
+    <Compile Include="Core\DTOs\PlayedGameDto.cs" />
+    <Compile Include="Controllers\API\PlayedGamesController.cs" />
+    <Compile Include="Core\DTOs\TypeOfGameDto.cs" />
+    <Compile Include="Core\DTOs\UserDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109091235230_InitialModel.cs" />
-    <Compile Include="Migrations\202109091235230_InitialModel.designer.cs">
+    <Compile Include="Persistence\EnitityConfigurations\MatchConfig.cs" />
+    <Compile Include="Persistence\IApplicationDbContext.cs" />
+    <Compile Include="Persistence\Migrations\202109091235230_InitialModel.cs" />
+    <Compile Include="Persistence\Migrations\202109091235230_InitialModel.designer.cs">
       <DependentUpon>202109091235230_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109091252572_CreateMatchTable.cs" />
-    <Compile Include="Migrations\202109091252572_CreateMatchTable.designer.cs">
+    <Compile Include="Persistence\Migrations\202109091252572_CreateMatchTable.cs" />
+    <Compile Include="Persistence\Migrations\202109091252572_CreateMatchTable.designer.cs">
       <DependentUpon>202109091252572_CreateMatchTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109091322285_OverrideConventionsForMatch.cs" />
-    <Compile Include="Migrations\202109091322285_OverrideConventionsForMatch.designer.cs">
+    <Compile Include="Persistence\Migrations\202109091322285_OverrideConventionsForMatch.cs" />
+    <Compile Include="Persistence\Migrations\202109091322285_OverrideConventionsForMatch.designer.cs">
       <DependentUpon>202109091322285_OverrideConventionsForMatch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109091327599_PopTypeOfGameTable.cs" />
-    <Compile Include="Migrations\202109091327599_PopTypeOfGameTable.designer.cs">
+    <Compile Include="Persistence\Migrations\202109091327599_PopTypeOfGameTable.cs" />
+    <Compile Include="Persistence\Migrations\202109091327599_PopTypeOfGameTable.designer.cs">
       <DependentUpon>202109091327599_PopTypeOfGameTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109100749548_AddFkPropertiesToMatch.cs" />
-    <Compile Include="Migrations\202109100749548_AddFkPropertiesToMatch.designer.cs">
+    <Compile Include="Persistence\Migrations\202109100749548_AddFkPropertiesToMatch.cs" />
+    <Compile Include="Persistence\Migrations\202109100749548_AddFkPropertiesToMatch.designer.cs">
       <DependentUpon>202109100749548_AddFkPropertiesToMatch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.cs" />
-    <Compile Include="Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.designer.cs">
+    <Compile Include="Persistence\Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.cs" />
+    <Compile Include="Persistence\Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.designer.cs">
       <DependentUpon>202109130709424_AddNameToAppUserAndPropsToMatch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Viewmodels\RegisterViewModel.cs" />
-    <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Viewmodels\ExternalLoginConfirmationViewModel.cs" />
-    <Compile Include="Viewmodels\ExternalLoginListViewModel.cs" />
-    <Compile Include="Viewmodels\ForgotPasswordViewModel.cs" />
-    <Compile Include="Viewmodels\ForgotViewModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Viewmodels\LoginViewModel.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Match.cs" />
-    <Compile Include="Viewmodels\ResetPasswordViewModel.cs" />
-    <Compile Include="Viewmodels\SendCodeViewModel.cs" />
-    <Compile Include="Models\TypeOfGame.cs" />
-    <Compile Include="Viewmodels\VerifyCodeViewModel.cs" />
+    <Compile Include="Persistence\Migrations\202109131111347_addedpolayername.cs" />
+    <Compile Include="Persistence\Migrations\202109131111347_addedpolayername.designer.cs">
+      <DependentUpon>202109131111347_addedpolayername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\202109131137204_addedPlayedGames.cs" />
+    <Compile Include="Persistence\Migrations\202109131137204_addedPlayedGames.designer.cs">
+      <DependentUpon>202109131137204_addedPlayedGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\202109140640580_AddedFollowersAndFollowees.cs" />
+    <Compile Include="Persistence\Migrations\202109140640580_AddedFollowersAndFollowees.designer.cs">
+      <DependentUpon>202109140640580_AddedFollowersAndFollowees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\202109150853114_AddNotification.cs" />
+    <Compile Include="Persistence\Migrations\202109150853114_AddNotification.designer.cs">
+      <DependentUpon>202109150853114_AddNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\202109151204142_AddNotification1.cs" />
+    <Compile Include="Persistence\Migrations\202109151204142_AddNotification1.designer.cs">
+      <DependentUpon>202109151204142_AddNotification1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\202109151352478_ChangestoNotification.cs" />
+    <Compile Include="Persistence\Migrations\202109151352478_ChangestoNotification.designer.cs">
+      <DependentUpon>202109151352478_ChangestoNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\Configuration.cs" />
+    <Compile Include="Core\Models\Following.cs" />
+    <Compile Include="Core\Models\Notification.cs" />
+    <Compile Include="Core\Models\NotificationType.cs" />
+    <Compile Include="Core\Models\PlayedGames.cs" />
+    <Compile Include="Core\Models\UserNotification.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
+    <Compile Include="Persistence\Repositories\FollowedGameRepository.cs" />
+    <Compile Include="Persistence\Repositories\FollowingsRepository.cs" />
+    <Compile Include="Core\Repositories\IFollowedGameRepository.cs" />
+    <Compile Include="Core\Repositories\IFollowingsRepository.cs" />
+    <Compile Include="Core\Repositories\IMatchRepository.cs" />
+    <Compile Include="Core\Repositories\IPlayedGameRepository.cs" />
+    <Compile Include="Core\Repositories\ITypeOfGameRepository.cs" />
+    <Compile Include="Core\Repositories\IUserNotificationsRepository.cs" />
+    <Compile Include="Persistence\Repositories\MatchRepository.cs" />
+    <Compile Include="Persistence\Repositories\PlayedGameRepository.cs" />
+    <Compile Include="Persistence\Repositories\TypeOfGameRepository.cs" />
+    <Compile Include="Persistence\Repositories\UserNotificationsRepository.cs" />
+    <Compile Include="Core\Viewmodels\MatchDetailsViewModel.cs" />
+    <Compile Include="Core\Viewmodels\MatchViewModel.cs" />
+    <Compile Include="Core\Viewmodels\RegisterViewModel.cs" />
+    <Compile Include="Persistence\ApplicationDbContext.cs" />
+    <Compile Include="Core\Viewmodels\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="Core\Viewmodels\ExternalLoginListViewModel.cs" />
+    <Compile Include="Core\Viewmodels\ForgotPasswordViewModel.cs" />
+    <Compile Include="Core\Viewmodels\ForgotViewModel.cs" />
+    <Compile Include="Core\Models\ApplicationUser.cs" />
+    <Compile Include="Core\Viewmodels\LoginViewModel.cs" />
+    <Compile Include="Core\Viewmodels\ManageViewModels.cs" />
+    <Compile Include="Core\Models\Match.cs" />
+    <Compile Include="Core\Viewmodels\ResetPasswordViewModel.cs" />
+    <Compile Include="Core\Viewmodels\SendCodeViewModel.cs" />
+    <Compile Include="Core\Models\TypeOfGame.cs" />
+    <Compile Include="Core\Viewmodels\VerifyCodeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Viewmodels\NotFutureDate.cs" />
-    <Compile Include="Viewmodels\MatchFormViewModel.cs" />
-    <Compile Include="Viewmodels\ValidTime.cs" />
+    <Compile Include="Core\Viewmodels\NotFutureDate.cs" />
+    <Compile Include="Core\Viewmodels\MatchFormViewModel.cs" />
+    <Compile Include="Core\Viewmodels\ValidTime.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -377,7 +478,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\controllers\matchController.js" />
+    <Content Include="Scripts\app\controllers\matchDetailController.js" />
+    <Content Include="Scripts\app\services\followingService.js" />
+    <Content Include="Scripts\app\services\matchService.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -485,6 +591,8 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -498,8 +606,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Games\Create.cshtml" />
+    <Content Include="Views\Shared\Games.cshtml" />
+    <Content Include="Views\Games\MatchForm.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.js.flow" />
@@ -510,10 +618,15 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Followees\Index.cshtml" />
+    <Content Include="Views\Games\Mine.cshtml" />
+    <Content Include="Scripts\underscore.min.map" />
+    <Content Include="Views\Games\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Account\" />
+    <Folder Include="Views\Followings\" />
     <Folder Include="Views\Manage\" />
   </ItemGroup>
   <ItemGroup>
@@ -522,23 +635,45 @@
     <Content Include="Scripts\jquery-3.6.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202109091235230_InitialModel.resx">
+    <EmbeddedResource Include="Persistence\Migrations\202109091235230_InitialModel.resx">
       <DependentUpon>202109091235230_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109091252572_CreateMatchTable.resx">
+    <EmbeddedResource Include="Persistence\Migrations\202109091252572_CreateMatchTable.resx">
       <DependentUpon>202109091252572_CreateMatchTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109091322285_OverrideConventionsForMatch.resx">
+    <EmbeddedResource Include="Persistence\Migrations\202109091322285_OverrideConventionsForMatch.resx">
       <DependentUpon>202109091322285_OverrideConventionsForMatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109091327599_PopTypeOfGameTable.resx">
+    <EmbeddedResource Include="Persistence\Migrations\202109091327599_PopTypeOfGameTable.resx">
       <DependentUpon>202109091327599_PopTypeOfGameTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109100749548_AddFkPropertiesToMatch.resx">
+    <EmbeddedResource Include="Persistence\Migrations\202109100749548_AddFkPropertiesToMatch.resx">
       <DependentUpon>202109100749548_AddFkPropertiesToMatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.resx">
+    <EmbeddedResource Include="Persistence\Migrations\202109130709424_AddNameToAppUserAndPropsToMatch.resx">
       <DependentUpon>202109130709424_AddNameToAppUserAndPropsToMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\202109131111347_addedpolayername.resx">
+      <DependentUpon>202109131111347_addedpolayername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\202109131137204_addedPlayedGames.resx">
+      <DependentUpon>202109131137204_addedPlayedGames.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\202109140640580_AddedFollowersAndFollowees.resx">
+      <DependentUpon>202109140640580_AddedFollowersAndFollowees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\202109150853114_AddNotification.resx">
+      <DependentUpon>202109150853114_AddNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\202109151204142_AddNotification1.resx">
+      <DependentUpon>202109151204142_AddNotification1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\202109151352478_ChangestoNotification.resx">
+      <DependentUpon>202109151352478_ChangestoNotification.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -8,8 +8,8 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using FootballMatchHub.Models;
-using FootballMatchHub.Viewmodels;
+using FootballMatchHub.Core.Viewmodels;
+using FootballMatchHub.Core.Models;
 
 namespace FootballMatchHub.Controllers
 {

@@ -5,7 +5,8 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using FootballMatchHub.Models;
+using FootballMatchHub.Persistence;
+using FootballMatchHub.Core.Models;
 
 namespace FootballMatchHub
 {

@@ -36,11 +36,26 @@ summary {
   display: block;
 }
 
+.ul.notifications {
+    list-style: none;
+    padding-left: 0;
+}
+
 span.field-validation-error {
     color: red;
     font-weight: bold;
 }
 
+.matches > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.matches > li .details {
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
 
 audio,
 canvas,
@@ -283,6 +298,17 @@ table {
   .navbar {
     display: none;
   }
+
+.navbar-inverse .notifications {
+position: relative;
+}
+
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 7px;
+    background: #257c18;
+}
+
   .table td,
   .table th {
     background-color: #fff !important;

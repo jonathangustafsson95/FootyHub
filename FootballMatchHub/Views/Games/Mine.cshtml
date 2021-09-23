@@ -1,0 +1,90 @@
+﻿@model IEnumerable<FootballMatchHub.Core.Models.Match>
+@{
+    ViewBag.Title = "My games";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Games</h2>
+
+<ul class="matches voffset3">
+    @foreach (var match in Model)
+    {
+        <li>
+            <div class="date">
+                <div class="month">
+                    @match.Datetime.ToString("MMM")
+                </div>
+                <div class="day">
+                    @match.Datetime.ToString("d ")
+                </div>
+                <div class="year">
+                    @match.Datetime.ToString("yyyy ")
+                </div>
+            </div>
+            <div class="details">
+                <span class="player">
+                    @match.Player.Name
+                </span>
+                <span class="homeTeam">
+                    @match.HomeTeam  -
+                </span>
+                <span class="awayTeam">
+                    @match.AwayTeam
+                </span>
+                <span class="typeOfGame">
+                    @match.TypeOfGame.Name
+                </span>
+                <span class="result">
+                    @match.Result
+                </span>
+                <div class="actions">
+                    <a href="@Url.Action("Edit", "Games", new { id = match.Id})">Edit</a>
+                    <a href="#" class="js-cancel-game" data-game-id="@match.Id">Cancel</a>
+                </div>
+            </div>
+        </li>
+    }
+</ul>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function (){
+            $(".js-cancel-game").click(function (e) {
+                var link = $(e.target);
+
+                bootbox.dialog({
+                    message: "Are you sure you want to cancel this game?",
+                    title: "Confirm",
+                    buttons: {
+                        no: {
+                            label: "No",
+                            className: "btn-default",
+                            callback: function () {
+                                bootbox.hideAll();
+                            }
+                        },
+                        yes: {
+                            label: "Yes",
+                            className: "btn-danger",
+                            callback: function () {
+                                $.ajax({
+                                    url: "/api/matches/" + link.attr("data-game-id"),
+                                    method: "DELETE"
+                                })
+                                .done(function () {
+                                    link.parents("li").fadeOut(function () {
+                                        $(this).remove();
+                                    });
+                                })
+                                .fail(function () {
+                                    alert("Something failed!");
+                                });
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}
